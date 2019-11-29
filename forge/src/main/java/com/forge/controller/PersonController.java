@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
-@RequestMapping(value = "/api/person")
+@RestController // se encarga de definir la clase como controlador para exponer a la web
+@RequestMapping(value = "/api/person")// el path a exponer del servicio y se conecta con el puerto
 public class PersonController {
 
     @Autowired

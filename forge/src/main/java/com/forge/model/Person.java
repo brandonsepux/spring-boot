@@ -4,13 +4,13 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "Person")
+@Entity // spring boot, realiza pesistencia
+@Table(name = "Person") //relaciona la tabla con la clase
 public class Person {
 
-    @Id
-    @Column(name = "id_person")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id// primary key
+    @Column(name = "id_person") // nombre de la clumna
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrementable
     private Long id;
 
     @Column(name = "nombre")
@@ -21,6 +21,29 @@ public class Person {
     @NotNull
     private String apellido;
 
+    @Column(name = "rut")
+    @NotNull
+    private String rut;
+
+    @Column(name = "celular")
+    @NotNull
+    private int celular;
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
+    public int getCelular() {
+        return celular;
+    }
 
     public Long getId() {
         return id;

@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service// declara que la clase sera utilizada como servicio en el controller
+//encrgado de realizar la operacion logica invocando a crud repository y la interfas de logica
 public class PersonImp implements IPersonService {
 
-    @Autowired
+    @Autowired// realiza la instancia de una clase o de ina interfaaz
     IPersonRepository personRepository;
 
     @Override
